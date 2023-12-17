@@ -1,0 +1,11 @@
+- Azure Import/Export でドライブを準備するのに必要なファイルは以下の操作:
+  - dataset.csv: インポート対象のファイル, Storage 内のインポート先のパス, ItemType を含む
+  - driveset.csv: DriveLetter, FormatOption(暗号化済かどうか), Encryption(暗号化するか暗号化解除するか), ExistingBitLockerKey などを含む
+  - どちらもルートフォルダに作成
+  - WAImportExport の PrepImport で, 対象のドライブにジャーナルファイルを作成
+- Azure File Sync における UNC(Universal Naming Convention) パスは以下のような形式: `\\storageaccountname.file.core.windows.net\myfileshare`
+- Azure File Sync では "エージェントのインストール" -> "サーバーの登録" の順に進む(インストール後に登録画面が開く)
+- "同じファイルが 2 つのサーバー上でほぼ同時に変更されると、どうなりますか?" -> "ファイルに対して 2 つのエンドポイントで同時に変更を加えた場合、その両方の変更が保持されます。 最後に書き込まれた変更では、元のファイル名が維持されます。 (LastWriteTime によって決定される) 古いファイルには、エンドポイント名と競合番号がファイル名に追加されます。"
+- クラウドエンドポイントでの更新は24時間に一回, サーバーエンドポイントは随時
+- コンテナ作成は `azcopy make`
+- 

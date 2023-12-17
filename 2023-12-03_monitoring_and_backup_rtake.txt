@@ -1,0 +1,8 @@
+- 電子メール1件/1分(60件/1時間), SMSメッセージ1件/5分(12件/1時間)
+- ポリシーの割り当ては新規作成したリソースに対してのみ有効
+- IT Service Management Connector: Azure と IT Service Management 製品(サービス)を接続する
+- VM のシステムログを Log Analytics に送信するには Microsoft Monitorgin Agent をインストールする
+- ストレージアカウントでバックアップ可能なのは Azure Files のみ
+- ロックはリソースグループ間の移動を妨げない
+- NSG フローログはストレージアカウントに書き込まれる
+- Recovery Service Vault の Backup レポートは Valut と同じリージョンにあることが必要(Log Analytics ワークスペースはどこでもいい)
